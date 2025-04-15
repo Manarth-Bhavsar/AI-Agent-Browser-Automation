@@ -117,7 +117,6 @@ Invoke-RestMethod -Uri http://localhost:8000/interact -Method Post -Body $json -
 | Invalid selectors | Handled with try/except and fallback click |
 | GPT output missing fields | Returns error message gracefully |
 | CAPTCHA or 2FA or JS popups| Manual Steps required |
-| Unrecognized action | Logs as unsupported action |
 | Add to cart but not logged in | Asks of Login |
 
 ---
