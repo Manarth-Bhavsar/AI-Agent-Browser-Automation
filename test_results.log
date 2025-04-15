@@ -1,0 +1,62 @@
+
+--- Test Run @ 2025-04-14 13:31:54.077494 ---
+
+[Test 4] ⚠️ Product not found, trigger fallback to first result
+Prompt: Search for Banana Printer on eBay and add it to cart
+Response: {"status":"ok","executed":["search"],"site":"ebay"}
+============================================================
+
+[Test 8] 🧠 Complex language (LLM test)
+Prompt: Go to Amazon, log in with my credentials, then search for wireless mouse and add the one that’s cheapest to the cart
+Response: {"status":"error","message":"error:Message: \nStacktrace:\n\tGetHandleVerifier [0x00007FF7F7FC5335+78597]\n\tGetHandleVerifier [0x00007FF7F7FC5390+78688]\n\t(No symbol) [0x00007FF7F7D791AA]\n\t(No symbol) [0x00007FF7F7DCF149]\n\t(No symbol) [0x00007FF7F7DCF3FC]\n\t(No symbol) [0x00007FF7F7E22467]\n\t(No symbol) [0x00007FF7F7DF712F]\n\t(No symbol) [0x00007FF7F7E1F2BB]\n\t(No symbol) [0x00007FF7F7DF6EC3]\n\t(No symbol) [0x00007FF7F7DC03F8]\n\t(No symbol) [0x00007FF7F7DC1163]\n\tGetHandleVerifier [0x00007FF7F826EEED+2870973]\n\tGetHandleVerifier [0x00007FF7F8269698+2848360]\n\tGetHandleVerifier [0x00007FF7F8286973+2967875]\n\tGetHandleVerifier [0x00007FF7F7FE017A+188746]\n\tGetHandleVerifier [0x00007FF7F7FE845F+222255]\n\tGetHandleVerifier [0x00007FF7F7FCD2B4+111236]\n\tGetHandleVerifier [0x00007FF7F7FCD462+111666]\n\tGetHandleVerifier [0x00007FF7F7FB3589+5465]\n\tBaseThreadInitThunk [0x00007FFB6D24E8D7+23]\n\tRtlUserThreadStart [0x00007FFB6EEB14FC+44]\n"}
+============================================================
+--- Test Run @ 2025-04-14 20:30:23.626558 ---
+
+
+[Test 1] ✅ Basic Amazon login + search + add to cart
+Prompt: Login to Amazon and search for Logitech K380 keyboard and add it to cart
+Response: {"status":"ok","executed":["login","search","add_to_cart"],"site":"amazon"}
+============================================================
+
+
+[Test 2] ✅ Basic eBay search only
+Prompt: Search for iPhone 13 cases on eBay
+Response: {"status":"ok","executed":["search"],"site":"ebay"}
+============================================================
+
+
+[Test 3] ⚠️ No match_keyword fallback (search item = match), Also early exit after searching as not logged in
+Prompt: Search for USB-C charging cable on Amazon and add it to cart
+Response: {"status":"ok","executed":["search"],"site":"amazon"}
+============================================================
+
+
+[Test 4] ⚠️ Product not found, trigger fallback to first result
+Prompt: Search for Banana Printer on eBay and add it to cart
+Response: {"status":"ok","executed":["search"],"site":"ebay"}
+============================================================
+
+
+[Test 5] ❌ Missing site
+Prompt: Search for gaming chair and add to cart
+Response: {"status":"error","message":"Missing site, action or keyword in parsed command."}
+============================================================
+
+
+[Test 6] ❌ Unsupported action
+Prompt: Search for headphones on Amazon and leave a review
+Response: {"status":"ok","executed":["search"],"site":"amazon"}
+============================================================
+
+
+[Test 7] 🧠 Complex language (LLM test)
+Prompt: Go to Amazon, log in with my credentials, then search for wireless mouse and add the one that’s cheapest to the cart
+Response: {"status":"ok","executed":["login","search","add_to_cart"],"site":"amazon"}
+============================================================
+
+
+[Test 8] ⚠️ Partial command (missing search)
+Prompt: Add to cart on Amazon
+Response: {"status":"error","message":"Missing site, action or keyword in parsed command."}
+============================================================
+

@@ -1,0 +1,14 @@
+# This can be used to make the app site independent
+amazon:
+  search_box: "#twotabsearchtextbox"
+  result_items: "div.s-result-item"
+  title_selector: "h2 span"
+  link_selector: "h2 a"
+  cart_button: "#add-to-cart-button"
+
+ebay:
+  search_box: "input[type='text']"
+  result_items: ".s-item"
+  title_selector: ".s-item__title"
+  link_selector: ".s-item__link"
+  cart_button: "#isCartBtn_btn"
