@@ -1,8 +1,4 @@
-# Loom Link 
-
-https://www.loom.com/share/7928653350f942f79de4e60cd6afab7f?sid=d48efac8-1f58-46b9-b707-4020c4efeef1
-
-# 🤖 AI-Powered Browser Automation Agent (Lvl 1)
+# 🤖 AI-Powered Browser Automation Agent
 
 An intelligent, API-driven agent built that allows natural language commands to control native browser workflows (like Amazon or eBay), using GPT-based parsing and Selenium automation.
 
@@ -130,11 +126,11 @@ Invoke-RestMethod -Uri http://localhost:8000/interact -Method Post -Body $json -
 ---
 
 ## 🎯 Future Improvements
-- Full Extract API (Level 2)
+- An Extract API to Extract useful information from the page
 - Config-driven selectors per site
-- Native Chrome control (Level 2+)
+- Native Chrome control
 ---
 
 ## 🧑‍💻 Author
-Built by Manarth Bhavsar for CrustData Build Challenge (Lvl 1)
+Built by Manarth Bhavsar
 
